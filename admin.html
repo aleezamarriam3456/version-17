@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Elegant Atelier - Admin Dashboard</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar for Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>Admin Menu</h2>
+            <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+        </div>
+        <ul class="sidebar-list">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="#stats">Dashboard</a></li>
+            <li><a href="#orders">Orders</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#users">User Management</a></li>
+            <li><a href="#reports">Reports</a></li>
+            <li><a href="#settings">Settings</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <header class="header">
+            <div class="header-left">
+                <div class="menu-icon" onclick="toggleSidebar()">
+                    <i class="bx bx-menu"></i>
+                </div>
+            </div>
+            <div class="header-logo">
+                <h1>The Elegant Atelier Admin</h1>
+            </div>
+            <div class="header-right">
+                <div class="icon-container">
+                    <div class="logout-icon" onclick="window.location.href='logout.html'">
+                        <i class="bx bx-log-out"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content Section -->
+        <section id="stats" class="dashboard">
+            <h2>Dashboard</h2>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Total Orders</h3>
+                    <p>200</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Products</h3>
+                    <p>50</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Users</h3>
+                    <p>150</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Revenue</h3>
+                    <p>$15,000</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Orders Section -->
+        <section id="orders" class="orders">
+            <h2>Recent Orders</h2>
+            <table class="orders-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer Name</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#1001</td>
+                        <td>Aleeza Marriam</td>
+                        <td>Shipped</td>
+                        <td>2024-01-25</td>
+                    </tr>
+                    <tr>
+                        <td>#1002</td>
+                        <td>Sarah</td>
+                        <td>Processing</td>
+                        <td>2024-01-24</td>
+                    </tr>
+                    <tr>
+                        <td>#1003</td>
+                        <td>Ali</td>
+                        <td>Delivered</td>
+                        <td>2024-01-23</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Manage Products Section -->
+        <section id="products" class="products">
+            <h2>Manage Products</h2>
+            <div class="product-actions">
+                <button onclick="window.location.href='add-product.html'">Add New Product</button>
+                <button onclick="window.location.href='manage-products.html'">Manage Existing Products</button>
+                <button onclick="window.location.href='product-categories.html'">Manage Categories</button>
+            </div>
+        </section>
+
+        <!-- User Management Section -->
+        <section id="users" class="users">
+            <h2>User Management</h2>
+            <table class="users-table">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#501</td>
+                        <td>Aleeza Marriam</td>
+                        <td>aleeza@example.com</td>
+                        <td>Active</td>
+                        <td><button>View</button><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>#502</td>
+                        <td>Sarah</td>
+                        <td>sarah@example.com</td>
+                        <td>Inactive</td>
+                        <td><button>View</button><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>#503</td>
+                        <td>Ali</td>
+                        <td>ali@example.com</td>
+                        <td>Active</td>
+                        <td><button>View</button><button>Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Reports Section -->
+        <section id="reports" class="reports">
+            <h2>Reports</h2>
+            <div class="reports-actions">
+                <button onclick="window.location.href='sales-report.html'">View Sales Report</button>
+                <button onclick="window.location.href='user-report.html'">View User Report</button>
+                <button onclick="window.location.href='inventory-report.html'">View Inventory Report</button>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="settings">
+            <h2>Settings</h2>
+            <button onclick="window.location.href='site-settings.html'">Site Settings</button>
+            <button onclick="window.location.href='payment-settings.html'">Payment Settings</button>
+            <button onclick="window.location.href='admin-profile.html'">Admin Profile</button>
+        </section>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

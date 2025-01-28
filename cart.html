@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .header {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+    }
+
+    .header a {
+      color: white;
+      text-decoration: none;
+      float: right;
+      padding: 5px 10px;
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+
+    .header a:hover {
+      background-color: white;
+      color: #333;
+    }
+
+    .main-content {
+      padding: 20px;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .card .button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .card .button:hover {
+      background-color: #555;
+    }
+
+    #cart-container {
+      display: none;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    My Online Store
+    <a href="#" id="view-cart" class="button">Cart</a>
+  </div>
+
+  <div class="main-content">
+    <h1>Products</h1>
+    <div class="cards">
+      <div class="card">
+        <h3>Product 1</h3>
+        <p>$10</p>
+        <button class="button add-to-cart" data-id="1" data-name="Product 1" data-price="10">Add to Cart</button>
+      </div>
+      <div class="card">
+        <h3>Product 2</h3>
+        <p>$20</p>
+        <button class="button add-to-cart" data-id="2" data-name="Product 2" data-price="20">Add to Cart</button>
+      </div>
+      <div class="card">
+        <h3>Product 3</h3>
+        <p>$30</p>
+        <button class="button add-to-cart" data-id="3" data-name="Product 3" data-price="30">Add to Cart</button>
+      </div>
+    </div>
+
+    <div id="cart-container">
+      <h1>Your Cart</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items"></tbody>
+      </table>
+      <p id="cart-total"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

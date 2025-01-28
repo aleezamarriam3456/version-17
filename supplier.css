@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.supplier-dashboard {
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+}

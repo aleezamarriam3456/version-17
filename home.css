@@ -1,0 +1,672 @@
+/* --------Header Styles------- */
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f4f4f4; /* Change background color if needed */
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: center; /* Center all elements */
+    align-items: center; /* Align items vertically */
+    background-color: black; /* Black background for the top bar */
+    padding: 10px 0; /* Adjust padding */
+    color: white; /* White text */
+    font-size: 0.9em;
+}
+
+/* Centering the Call and Icons */
+.top-bar .call-info {
+    margin-right: 20px; /* Space between call info and social icons */
+    font-weight: 300; /* Light font weight */
+}
+
+.phone-number {
+    text-decoration: underline; /* Underline only the phone number */
+    text-decoration-color: rgba(255, 255, 255, 0.5); /* Light line color */
+    text-decoration-thickness: 1px; /* Thin underline */
+    margin: 0 10px; /* Space around the number */
+}
+
+.social-links {
+    display: flex; /* Display icons in a row */
+    gap: 20px; /* Space between social icons */
+}
+
+.social-links a {
+    color: white; /* White color for the social icons */
+    font-size: 1.4em; /* Size of the icons */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.social-links a:hover {
+    color: #deb887; /* Light tan color on hover */
+}
+
+
+/*-------- Main Header --------*/
+
+.main-header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out children */
+    align-items: center; /* Center vertically */
+    background-color: #ffffff; /* Background color */
+    padding: 4px 6px; /* Padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: sticky; /* Keep the header fixed at the top */
+    top: 0; /* Positioning */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Header Left */
+.header-left {
+    display: flex; /* Flex container */
+    align-items: center; /* Center icons vertically */
+}
+
+/* Icons */
+/* Basic styles for icons */
+.menu-icon, .sign-in-button {
+    font-size: 1.5em;
+    color: #8b4513;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* Style the menu toggle button */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    font-size: 2em;
+}
+
+/* For larger screens, show the menu normally */
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* For smaller screens, hide the menu by default */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show the hamburger icon */
+    }
+
+    /* Hide the nav menu on smaller screens */
+    .nav-menu {
+        display: none;
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+    }
+
+    .nav-menu.active {
+        display: block; /* Show the menu when 'active' class is added */
+    }
+
+    /* Make the icons smaller on smaller screens */
+    .menu-icon  {
+        font-size: 1.2em;
+    }
+}
+
+/* If you have a background overlay or something similar when the menu is open */
+.nav-menu.active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    display: block;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Basic icon styles */
+.search-icon, .sign-in-button {
+  font-size: 1.5em;
+  color: #8b4513; /* Dark brown color */
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+/* Hide the search input by default */
+.search-input {
+  display: none; /* Hidden by default */
+  padding: 5px 10px;
+  font-size: 1em;
+  border: 1px solid #8b4513;
+  border-radius: 5px;
+  margin-top: 5px;
+  width: 200px;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .search-icon {
+    font-size: 1.2em; /* Smaller icon on mobile */
+  }
+
+  /* Make the search input fit better on smaller screens */
+  .search-input {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
+/* Basic icon styles */
+.search-icon {
+    font-size: 1.5em;
+    color: #8b4513; /* Dark brown color */
+    cursor: pointer;
+    margin-right: 15px;
+  }
+  
+  /* Search input field */
+  .search-input {
+    display: none; /* Hidden by default */
+    padding: 5px 10px;
+    font-size: 1em;
+    border: 1px solid #8b4513;
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 200px;
+  }
+  
+  /* Search results container */
+  .search-results {
+    display: none; /* Hidden by default */
+    border: 1px solid #8b4513;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: white;
+    width: 200px;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  /* Result items */
+  .search-results ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .search-results ul li {
+    padding: 5px 0;
+    cursor: pointer;
+    color: #8b4513;
+  }
+  
+  /* Highlight results on hover */
+  .search-results ul li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 768px) {
+    .search-icon {
+      font-size: 1.2em;
+    }
+  
+    .search-input {
+      width: 100%; /* Full width on smaller screens */
+    }
+  
+    .search-results {
+      width: 100%; /* Full width for results on small screens */
+    }
+  }
+  
+
+
+/* Header Right */
+.header-right {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center icons vertically */
+}
+
+/* Icon Container */
+.icon-container {
+    display: flex; /* Display icons in a row */
+    align-items: center; /* Center icons vertically */
+}
+
+/* Sign In Button */
+.sign-in-button {
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 1.5em; /* Size of the icon */
+    color: #8b4513; /* Dark brown color */
+    margin-right: 15px; /* Space from cart icon */
+}
+
+/* Cart Icon */
+.cart-icon {
+    font-size: 1.5em; /* Size of the icon */
+    color: #8b4513; /* Dark brown color */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hover Effects for Icons */
+.menu-icon:hover,
+.search-icon:hover,
+.sign-in-button:hover,
+.cart-icon:hover {
+    color: #deb887; /* Light tan color on hover */
+    transition: color 0.3s; /* Smooth transition effect */
+}
+
+
+
+/*------- Sidebar Styles ---------- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -50%; /* Start off-screen, half screen width */
+    width: 30%; /* Default width for desktop view */
+    height: 100vh; /* Full viewport height */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    padding-top: 0; /* Remove any padding at the top */
+    background-color: white;
+}
+ 
+/* Sidebar Header */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #000; /* Black background */
+    padding: 10px;
+    color: white;
+    margin: 0; /* Remove any margin that might add space */
+}
+
+.sidebar.active {
+    left: 0; /* Bring sidebar fully into view */
+}
+
+.sidebar-header h2 {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 1.5em;
+    margin: 0;
+    color: white; /* White text color for visibility */
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px; /* Position close to the right edge */
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white; /* White color for close button */
+}
+
+/* Sidebar list */
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-list li {
+    padding: 12px 20px;  /* Increased padding for better spacing */
+}
+
+/* Styling the links in the sidebar */
+.sidebar-list li a {
+    text-decoration: none;
+    color: #8b4513; /* Rich brown color for the text */
+    display: block;
+    font-size: 16px;  /* Scalable font size */
+    font-weight: 500;  /* Medium font weight */
+    transition: background-color 0.3s ease, color 0.3s ease;  /* Smooth transition */
+}
+
+/* Hover effect on sidebar items */
+.sidebar-list li a:hover {
+    background-color: #deb887; /* Lighter brown color */
+    color: #fff;  /* White text color on hover for contrast */
+}
+
+/* Active link style */
+.sidebar-list li a.active {
+    background-color: #8b4513; /* Highlight active link with a darker brown */
+    color: #fff;  /* White text color for active link */
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    /* Make the sidebar full width on mobile devices */
+    .sidebar {
+        width: 100%;  /* Full width on mobile */
+        left: -100%; /* Hide sidebar off-screen initially */
+    }
+
+    /* Sidebar becomes active (left: 0) on mobile when toggled */
+    .sidebar.active {
+        left: 0;
+    }
+
+    /* Reduce font size for sidebar links */
+    .sidebar-list li {
+        font-size: 14px;  /* Smaller font size for mobile screens */
+    }
+
+    /* Adjust the font size for header on mobile */
+    .sidebar-header h2 {
+        font-size: 1.2em; /* Smaller header text on mobile */
+    }
+
+    /* Reduce padding for better spacing on mobile */
+    .sidebar-list li {
+        padding: 10px 15px;
+    }
+
+    /* Hide the close button when sidebar is active on mobile */
+    .sidebar.active .close-btn {
+        display: none; /* Optionally, hide close button if needed */
+    }
+}
+
+/* Overlay effect when sidebar is open */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Shifted content */
+.main-content.shifted {
+    transform: translateX(20%); /* Shift the content to make space for the sidebar */
+    transition: transform 0.3s ease;
+    filter: brightness(0.8); /* Dim effect on main content */
+}
+
+/*-------Footer Section---------*/
+
+/* Footer styles */
+.footer {
+    background-color: white; /* Footer background color */
+    color: #333; /* Main text color */
+    text-align: center; /* Center text */
+    padding: 20px 0; /* Padding for spacing */
+    position: relative; /* Set positioning */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Full width */
+}
+
+/* Footer content styles */
+.footer-content {
+    max-width: 1200px; /* Limit width for large screens */
+    margin: 0 auto; /* Center content */
+}
+
+/* Footer links styles */
+.footer-link, .social-link {
+    color: #8b4513; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+.footer-link:hover, .social-link:hover {
+    color: #deb887; /* Change color on hover */
+}
+
+/* Social icon styles */
+.social-icons {
+    margin: 10px 0; /* Spacing between icons and text */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Space between icons */
+    font-size: 22px; /* Icon size */
+}
+
+/* Store name styles */
+.store-name {
+    color: #555; /* Darker shade for store name */
+    font-size: 1.5em; /* Larger font size */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+/* Additional links styles */
+.footer-links {
+    margin-top: 10px; /* Spacing between icons and links */
+}
+
+.footer-links a {
+    color: #aaa; /* Light color for additional links */
+    margin: 0 10px; /* Space between links */
+}
+
+
+
+/* ---------- Footer Section Styles  ---------- */
+/* ---------- Common Section Styles ---------- */
+
+
+.section {
+    background-color: #ffffff; /* White background for sections */
+    padding: 40px 20px; /* Padding for spacing */
+    margin: 20px 0; /* Space between sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* ---------- Section Headings ---------- */
+.section h2 {
+    font-size: 1.8em; /* Font size for section headings */
+    color: #5a270d; /* Dark brown color for headings */
+    margin-bottom: 20px; /* Space below headings */
+    text-align: center; /* Center align headings */
+}
+
+/* ---------- About Section ---------- */
+.about {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between;
+    gap: 20px; /* Space between items */
+}
+
+.about img {
+    max-width: 45%; /* Image takes up 45% of the container */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #ff0000; /* Red color for strikethrough price */
+    margin-right: 10px; /* Space between the original price and the sale price */
+}
+
+.sale-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00b300; /* Green color for sale price */
+}
+@media (max-width: 768px) {
+    .product-grid {
+        display: block;
+    }
+}
+
+/* Overall container for your grid */
+.product-grid-container {
+    max-width: 1200px; /* Limits the width of the content */
+    min-width: 800px;  /* Sets a minimum width */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 0 20px; /* Padding on the sides */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    gap: 20px;
+    padding: 20px 0; /* Padding only at the top and bottom */
+}
+
+.product-item {
+    padding: 0; /* Remove padding */
+    border-radius: 0; /* Remove border radius */
+    text-align: center;
+    box-shadow: none; /* Remove box shadow */
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-item img {
+    width: 220px; /* Larger width */
+    height: 220px; /* Larger height */
+    object-fit: cover; /* Ensures the images cover the area without distortion */
+    border-radius: 0; /* Remove border radius around the image */
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.add-to-cart {
+    background-color: #4e2a1e; /* Dark Brown Color */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #3b1a10; /* Darker Brown for hover effect */
+}
+
+.price {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.sale-price .original-price {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.sale-icon {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff6b6b;
+}
+
+/* Rating Styling */
+.rating {
+    font-size: 14px; /* Adjust star size */
+    color: #333; /* Dark color for the stars */
+    text-align: center; /* Center-align the rating */
+    margin: 5px 0;
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically align content */
+    gap: 5px; /* Space between stars and rating text */
+}
+
+/* Sold Count Styling */
+.sold-count {
+    font-size: 12px; /* Smaller font for sold count */
+    color: #888; /* Neutral color */
+    text-align: center; /* Center-align the sold text */
+    margin: 5px 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on tablets */
+    }
+
+    .product-item img {
+        width: 180px; /* Slightly smaller image size for smaller screens */
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr; /* 1 item per row on mobile */
+    }
+
+    .product-item img {
+        width: 150px; /* Even smaller image size for mobile */
+        height: 150px;
+    }
+}
+
+
+
+/* --------- Responsive Layout -------- */
+@media (max-width: 768px) {
+    /* Top bar styles for mobile */
+    .top-bar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .top-bar .social-links {
+        margin-top: 10px;
+    }
+
+    /* Header styles for mobile */
+    .main-header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header-logo h1 {
+        font-size: 1.5em;
+    }
+
+    .icon-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Sidebar for mobile */
+    .sidebar {
+        width: 70%;
+    }
+
+    /* Footer for mobile */
+    .footer-content {
+        padding: 10px;
+    }
+
+    /* Adjust About section layout */
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about img {
+        max-width: 80%; /* Image takes up more space */
+        margin-bottom: 20px;
+    }
+}

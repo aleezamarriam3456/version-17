@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Elegant Atelier - Q&A</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Q&A Platform</h1>
+
+        <!-- Question Form -->
+        <form id="questionForm" style="margin-bottom: 20px;">
+            <label for="question">Ask a question:</label><br>
+            <input type="text" id="question" name="question" style="width: 300px; padding: 5px;" required>
+            <button type="submit" style="padding: 5px 10px;">Submit</button>
+        </form>
+
+        <!-- Display Section -->
+        <div id="messages" style="border: 1px solid #ddd; padding: 10px; height: 200px; overflow-y: auto; background: #f9f9f9;">
+            <strong>Server Responses:</strong>
+            <ul id="responseList" style="padding-left: 20px;"></ul>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

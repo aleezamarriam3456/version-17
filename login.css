@@ -1,0 +1,82 @@
+/* General body styles */
+body {
+    margin: 0;
+    background-size: cover;
+    background-image: url('../image/background.jpg'); /* Background image */
+    color: #8b4513; /* Dark brown color for text to match signup page */
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+/* Login container styles */
+#login-page {
+    display: flex; /* Center the container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background: rgba(0, 0, 0, 0.4); /* Slightly dark overlay for the background */
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent white background for the dialog to match signup */
+    padding: 35px;
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+    width: 400px;
+    backdrop-filter: blur(12px); /* Blurred background effect */
+    text-align: center; /* Center align text */
+}
+
+/* Heading styles */
+.login-container h2 {
+    margin-bottom: 15px;
+    color: #8b4513; /* Dark brown color for heading to match signup page */
+    font-size: 2.2rem;
+    font-family: 'Dancing Script', cursive; /* Elegant font for brand heading */
+}
+
+/* Input Styles */
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0; /* Space between inputs */
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.8); /* Slight transparency for inputs */
+    color: #4a4a4a; /* Input text color for readability */
+}
+
+/* Button Styles */
+.login-container button {
+    background-color: #8b4513; /* Dark brown color to match signup page */
+    color: #f5f5dc; /* Light cream color for button text */
+    padding: 12px;
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+/* Hover effects for buttons */
+.login-container button:hover {
+    background: linear-gradient(135deg, #b8860b, #deb887); /* Gradient on hover */
+}
+
+/* Style for the signup and forgot password links */
+.login-container p {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #8b4513; /* Dark brown color for paragraph text */
+}
+
+.login-container a {
+    color: #8b4513; /* Dark brown color for links */
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

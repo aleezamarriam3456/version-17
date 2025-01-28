@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulate Multithreading in JS</title>
+</head>
+<body>
+    <h1>Simulating Multithreading with JavaScript</h1>
+    <button onclick="runAsyncProcesses()">Run Processes</button>
+
+    <script>
+        function asyncProcess(name, time) {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log(`${name} completed after ${time}ms`);
+                    resolve(name);
+                }, time);
+            });
+        }
+
+        function runAsyncProcesses() {
+            // Simulate three tasks running asynchronously (like multithreading)
+            Promise.all([
+                asyncProcess('Process 1', 1000),
+                asyncProcess('Process 2', 500),
+                asyncProcess('Process 3', 2000)
+            ]).then((results) => {
+                console.log('All processes completed:', results);
+            });
+        }
+    </script>
+</body>
+</html>
